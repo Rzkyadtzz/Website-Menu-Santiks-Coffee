@@ -4,33 +4,35 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#206bab" />
-  <title>Santiks Coffee & Calm — Sehat Nikmat Santiks</title>
+  <title>Santiks Coffee & Calm</title>
   <meta name="description" content="Coffee shop dengan suasana calm & cozy. Order cepat via WhatsApp, GoFood, atau GrabFood. Lihat menu, jam buka, lokasi, dan promo terbaru di sini." />
 
-  <!-- Favicon / Logo (tetap gunakan nama file yang sudah ada) -->
-  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/logo-32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="favicon/logo-192.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/logo-180.png">
+  <!-- Favicon / Logo -->
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/logo-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/logo-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/logo-180.png" />
 
   <!-- Bootstrap & Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <!-- Styles utama -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: rgba(27,27,27,.6)">
     <div class="container">
-      <a class="navbar-brand fw-bold text-truncate" href="#home" style="max-width:60%">Santiks Coffee & Calm</a>
+      <a class="navbar-brand fw-bold text-truncate" href="#home" style="max-width:60%" aria-label="Santiks Coffee & Calm">Santiks Coffee & Calm</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Nav links -->
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
           <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
@@ -38,8 +40,8 @@
           <li class="nav-item"><a class="nav-link" href="#event">Event</a></li>
           <li class="nav-item"><a class="nav-link" href="#lokasi">Lokasi</a></li>
           <li class="nav-item mt-2 mt-lg-0">
-            <a class="btn btn-sm btn-brand ms-lg-2 w-100 w-lg-auto" href="#order">
-              <i class="bi bi-bag-check me-1"></i> Order Cepat
+            <a class="btn btn-sm btn-brand ms-lg-2 w-100 w-auto" href="#order">
+              <i class="bi bi-bag-check me-1" aria-hidden="true"></i> Order Cepat
             </a>
           </li>
         </ul>
@@ -48,330 +50,324 @@
   </nav>
 
   <!-- Hero -->
-  <header id="home" class="hero">
-    <div class="container py-5">
-      <span class="badge badge-soft rounded-pill px-3 py-2 mb-3 d-inline-flex align-items-center">
-        <i class="bi bi-cup-hot me-2"></i>100% Arabica • Cozy Vibes
+  <header id="home" class="hero" role="banner">
+    <div class="container py-5" data-aos="fade-up" data-aos-duration="600" data-aos-offset="80">
+
+      <!-- Badge -->
+      <span class="badge badge-soft text-white rounded-pill px-3 py-2 mb-2 d-inline-flex align-items-center float-anim"
+            data-aos="zoom-in" data-aos-delay="100" aria-label="Informasi kedai">
+        <i class="bi bi-cup-hot me-2" aria-hidden="true"></i>100% Arabica • Cozy Vibes
       </span>
-      <h1 class="display-4 mb-3 text-wrap">Sehat - Nikmat - Santiks</h1>
-      <p class="lead mb-4">Signature beans, barista ramah, dan spot estetik buat kerja, nugas, atau sekadar healing.</p>
-      <div class="d-flex gap-2 justify-content-center flex-wrap">
-        <a class="btn btn-brand btn-lg" href="#order"><i class="bi bi-bag me-2"></i>Order Sekarang</a>
-        <a class="btn btn-outline-light btn-lg" href="#menu-lengkap"><i class="bi bi-menu-up me-2"></i>Lihat Menu</a>
+
+      <!-- Judul -->
+      <h1 class="display-4 mb-3 text-wrap float-anim float-delay-1"
+          data-aos="fade-up" data-aos-delay="180" data-aos-anchor-placement="top-bottom">
+        Santiks - Coffee - Calm
+      </h1>
+
+      <!-- Deskripsi -->
+      <p class="lead mb-4 float-anim float-delay-2"
+         data-aos="fade-up" data-aos-delay="240" data-aos-anchor-placement="top-bottom">
+        Rasa kopi premium, pelayanan hangat, dan spot estetik yang bikin kamu betah berlama-lama.
+      </p>
+
+      <!-- Tombol -->
+      <div class="d-flex gap-2 justify-content-center flex-wrap hero-buttons float-anim float-delay-3"
+           data-aos="fade-up" data-aos-delay="300">
+        <a class="btn btn-brand btn-lg" href="#order">
+          <i class="bi bi-bag me-2" aria-hidden="true"></i>Order Sekarang
+        </a>
+        <a class="btn btn-outline-light btn-lg" href="#menu">
+          <i class="bi bi-list me-2" aria-hidden="true"></i>Lihat Menu
+        </a>
       </div>
+
     </div>
   </header>
 
-  <!-- Highlights -->
-  <section class="py-5" id="highlight">
-    <div class="container">
-      <div class="row g-3 g-md-4 row-cols-3 row-cols-md-3">
-        <!-- Item 1 -->
-        <div class="col">
-          <div class="card h-100 animate-item">
-            <div class="card-body p-3 p-md-4">
-              <div class="d-flex align-items-center mb-2 mb-md-3">
-                <i class="bi bi-emoji-smile fs-3 me-3 text-warning"></i>
-                <h3 class="h6 h5-md m-0">Vibes Nyaman</h3>
-              </div>
-              <p class="text-secondary mb-0">Colokan banyak, Wi-Fi kencang, lighting hangat. Cocok buat nugas atau santai.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="col">
-          <div class="card h-100 animate-item">
-            <div class="card-body p-3 p-md-4">
-              <div class="d-flex align-items-center mb-2 mb-md-3">
-                <i class="bi bi-cup-hot fs-3 me-3 icon-brand"></i>
-                <h3 class="h6 h5-md m-0">100% Arabica</h3>
-              </div>
-              <p class="text-secondary mb-0">Beans pilihan dengan roast konsisten. Rasa clean, aftertaste manis.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="col">
-          <div class="card h-100 animate-item">
-            <div class="card-body p-3 p-md-4">
-              <div class="d-flex align-items-center mb-2 mb-md-3">
-                <i class="bi bi-bag-check fs-3 me-3 text-success"></i>
-                <h3 class="h6 h5-md m-0">Order Kilat</h3>
-              </div>
-              <p class="text-secondary mb-0">Klik → pesan → tinggal ambil. Tersedia di ShopeeFood, GoFood, dan GrabFood.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Animasi Highlights -->
-  <script>
-    // IntersectionObserver untuk animasi masuk viewport
-    (() => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => entry.target.classList.add("show"), index * 150);
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
-      document.querySelectorAll(".animate-item").forEach(el => observer.observe(el));
-    })();
-  </script>
-
-  <!-- Menu Populer (scroll horizontal di HP) -->
-<section class="py-5 bg-white" id="menu">
+<!-- Highlights -->
+<section class="py-5" id="highlight" aria-labelledby="hl-title">
   <div class="container">
-    <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-3">
-      <div>
-        <h2 class="section-title m-0">Menu Populer</h2>
-        <p class="text-secondary mb-0">Best-seller yang paling sering diorder pelanggan.</p>
-      </div>
-    </div>
-
-    <!-- Scroll horizontal -->
-    <div class="menu-scroll d-flex overflow-auto gap-3 pb-2" style="-webkit-overflow-scrolling:touch;">
+    <h2 id="hl-title" class="visually-hidden">Keunggulan Santiks Coffee</h2>
+    <div class="row g-3 g-md-4 row-cols-3 row-cols-md-3">
       
-      <!-- Item 1 -->
-      <div class="card flex-shrink-0 menu-card">
-        <img src="images/espresso.jpg" class="card-img-top menu-img" alt="Moccacino">
-        <div class="card-body menu-body">
-          <div class="d-flex justify-content-between align-items-start mb-1">
-            <h3 class="h6 mb-0 text-truncate">Moccacino</h3>
-            <span class="menu-price">Rp25.000</span>
+      <div class="col">
+        <div class="card h-100" data-aos="fade-up" data-aos-offset="80" data-aos-delay="0">
+          <div class="card-body p-3 p-md-4">
+            <div class="d-flex align-items-center mb-2 mb-md-3">
+              <i class="bi bi-emoji-smile fs-3 me-3 text-warning" aria-hidden="true"></i>
+              <h3 class="h6 h5-md m-0">Vibes Nyaman</h3>
+            </div>
+            <p class="text-secondary mb-0">Colokan banyak, Wi-Fi kencang, lighting hangat. Cocok buat nugas atau santai.</p>
           </div>
-          <p class="text-secondary small menu-desc">Espresso + steamed milk, creamy.</p>
-          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1"></i>Pesan</a>
         </div>
       </div>
 
-      <!-- Item 2 -->
-      <div class="card flex-shrink-0 menu-card">
-        <img src="images/kopsu.jpg" class="card-img-top menu-img" alt="KopSu Pistachio">
-        <div class="card-body menu-body">
-          <div class="d-flex justify-content-between align-items-start mb-1">
-            <h3 class="h6 mb-0 text-truncate">KopSu Pistachio</h3>
-            <span class="menu-price">Rp23.000</span>
+      <div class="col">
+        <div class="card h-100" data-aos="fade-up" data-aos-offset="80" data-aos-delay="80">
+          <div class="card-body p-3 p-md-4">
+            <div class="d-flex align-items-center mb-2 mb-md-3">
+              <i class="bi bi-cup-hot fs-3 me-3 icon-brand" aria-hidden="true"></i>
+              <h3 class="h6 h5-md m-0">100% Arabica</h3>
+            </div>
+            <p class="text-secondary mb-0">Beans pilihan dengan roast konsisten. Rasa clean, aftertaste manis.</p>
           </div>
-          <p class="text-secondary small menu-desc">Buttery, nutty, manis gurih.</p>
-          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1"></i>Pesan</a>
         </div>
       </div>
 
-      <!-- Item 3 -->
-      <div class="card flex-shrink-0 menu-card">
-        <img src="images/mocktail.jpg" class="card-img-top menu-img" alt="Cocopeach">
-        <div class="card-body menu-body">
-          <div class="d-flex justify-content-between align-items-start mb-1">
-            <h3 class="h6 mb-0 text-truncate">Cocopeach</h3>
-            <span class="menu-price">Rp25.000</span>
+      <div class="col">
+        <div class="card h-100" data-aos="fade-up" data-aos-offset="80" data-aos-delay="160">
+          <div class="card-body p-3 p-md-4">
+            <div class="d-flex align-items-center mb-2 mb-md-3">
+              <i class="bi bi-bag-check fs-3 me-3 text-success" aria-hidden="true"></i>
+              <h3 class="h6 h5-md m-0">Order Kilat</h3>
+            </div>
+            <p class="text-secondary mb-0">Klik → Pesan → Tinggal tunggu. Tersedia di ShopeeFood, GoFood, dan GrabFood.</p>
           </div>
-          <p class="text-secondary small menu-desc">Segar, fruity, ringan.</p>
-          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1"></i>Pesan</a>
-        </div>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="card flex-shrink-0 menu-card">
-        <img src="images/milkbassed.jpg" class="card-img-top menu-img" alt="Redvelvet">
-        <div class="card-body menu-body">
-          <div class="d-flex justify-content-between align-items-start mb-1">
-            <h3 class="h6 mb-0 text-truncate">Redvelvet</h3>
-            <span class="menu-price">Rp20.000</span>
-          </div>
-          <p class="text-secondary small menu-desc">Creamy & dessert-like.</p>
-          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1"></i>Pesan</a>
-        </div>
-      </div>
-
-      <!-- Item 5 -->
-      <div class="card flex-shrink-0 menu-card">
-        <img src="images/snack.jpg" class="card-img-top menu-img" alt="Chicken Seaweed Roll">
-        <div class="card-body menu-body">
-          <div class="d-flex justify-content-between align-items-start mb-1">
-            <h3 class="h6 mb-0 text-truncate">Chicken Seaweed Roll</h3>
-            <span class="menu-price">Rp17.000</span>
-          </div>
-          <p class="text-secondary small menu-desc">Gurih crunchy.</p>
-          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1"></i>Pesan</a>
-        </div>
-      </div>
-
-      <!-- Item 6 -->
-      <div class="card flex-shrink-0 menu-card">
-        <img src="images/main.jpg" class="card-img-top menu-img" alt="Ayam Suir Bali">
-        <div class="card-body menu-body">
-          <div class="d-flex justify-content-between align-items-start mb-1">
-            <h3 class="h6 mb-0 text-truncate">Ayam Suir Bali</h3>
-            <span class="menu-price">Rp28.000</span>
-          </div>
-          <p class="text-secondary small menu-desc">Pedas gurih khas Bali.</p>
-          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1"></i>Pesan</a>
-        </div>
-      </div>
-
-      <!-- Item 7 -->
-      <div class="card flex-shrink-0 menu-card">
-        <img src="images/pasta.jpg" class="card-img-top menu-img" alt="Spaghetti Bolognese">
-        <div class="card-body menu-body">
-          <div class="d-flex justify-content-between align-items-start mb-1">
-            <h3 class="h6 mb-0 text-truncate">Spaghetti Bolognese</h3>
-            <span class="menu-price">Rp23.000</span>
-          </div>
-          <p class="text-secondary small menu-desc">Tomato-based, savory.</p>
-          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1"></i>Pesan</a>
-        </div>
-      </div>
-
-      <!-- Item 8 -->
-      <div class="card flex-shrink-0 menu-card">
-        <img src="images/pastry.jpg" class="card-img-top menu-img" alt="Churros">
-        <div class="card-body menu-body">
-          <div class="d-flex justify-content-between align-items-start mb-1">
-            <h3 class="h6 mb-0 text-truncate">Churros</h3>
-            <span class="menu-price">Rp22.000</span>
-          </div>
-          <p class="text-secondary small menu-desc">Crispy & cinnamon sugar.</p>
-          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1"></i>Pesan</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+  <!-- Menu Populer (scroll horizontal di HP) -->
+<section class="py-5 bg-beige" id="menu" aria-labelledby="menu-title">
+  <div class="container">
+    <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-3">
+      <div>
+        <h2 id="menu-title" class="section-title m-0" data-aos="fade-right">Menu Populer</h2>
+        <p class="text-secondary mb-0" data-aos="fade-right" data-aos-delay="100">Best seller yang paling sering diorder pelanggan.</p>
+      </div>
+    </div>
+
+    <!-- Scroll horizontal -->
+    <div class="menu-scroll d-flex overflow-auto gap-3 pb-2" style="-webkit-overflow-scrolling:touch;" role="region" aria-label="Daftar menu populer dengan gulir horizontal">
+      
+      <!-- Item 1 -->
+      <div class="card flex-shrink-0 menu-card" data-aos="fade-up" data-aos-delay="0">
+        <img src="images/Mocaccino _.png" class="card-img-top menu-img" alt="Moccacino" loading="lazy" width="640" height="300">
+        <div class="card-body menu-body">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <h3 class="h6 mb-0 text-truncate">Moccacino</h3>
+            <span class="menu-price">Rp25.000</span>
+          </div>
+          <p class="text-secondary small menu-desc">Espresso dan steamed milk, creamy.</p>
+          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1" aria-hidden="true"></i>Pesan</a>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="card flex-shrink-0 menu-card" data-aos="fade-up" data-aos-delay="50">
+        <img src="images/Pistachio _.png" class="card-img-top menu-img" alt="KopSu Pistachio" loading="lazy" width="640" height="300">
+        <div class="card-body menu-body">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <h3 class="h6 mb-0 text-truncate">KopSu Pistachio</h3>
+            <span class="menu-price">Rp23.000</span>
+          </div>
+          <p class="text-secondary small menu-desc">Buttery, nutty, manis gurih.</p>
+          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1" aria-hidden="true"></i>Pesan</a>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="card flex-shrink-0 menu-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/mocktail.jpg" class="card-img-top menu-img" alt="Cocopeach" loading="lazy" width="640" height="300">
+        <div class="card-body menu-body">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <h3 class="h6 mb-0 text-truncate">Cocopeach</h3>
+            <span class="menu-price">Rp25.000</span>
+          </div>
+          <p class="text-secondary small menu-desc">Segar, fruity, ringan.</p>
+          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1" aria-hidden="true"></i>Pesan</a>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="card flex-shrink-0 menu-card" data-aos="fade-up" data-aos-delay="150">
+        <!-- Periksa nama file ini di folder images -->
+        <img src="images/Red Velvet.png" class="card-img-top menu-img" alt="Redvelvet" loading="lazy" width="640" height="300">
+        <div class="card-body menu-body">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <h3 class="h6 mb-0 text-truncate">Redvelvet</h3>
+            <span class="menu-price">Rp20.000</span>
+          </div>
+          <p class="text-secondary small menu-desc">Creamy dan dessert-like.</p>
+          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1" aria-hidden="true"></i>Pesan</a>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="card flex-shrink-0 menu-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/Chicken Seaweed Roll.png" class="card-img-top menu-img" alt="Chicken Seaweed Roll" loading="lazy" width="640" height="300">
+        <div class="card-body menu-body">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <h3 class="h6 mb-0 text-truncate">Chicken Seaweed Roll</h3>
+            <span class="menu-price">Rp17.000</span>
+          </div>
+          <p class="text-secondary small menu-desc">Gurih dan crunchy.</p>
+          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1" aria-hidden="true"></i>Pesan</a>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="card flex-shrink-0 menu-card" data-aos="fade-up" data-aos-delay="250">
+        <img src="images/Balinese Chicken Spicy.png" class="card-img-top menu-img" alt="Ayam Suir Bali" loading="lazy" width="640" height="300">
+        <div class="card-body menu-body">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <h3 class="h6 mb-0 text-truncate">Ayam Suir Bali</h3>
+            <span class="menu-price">Rp28.000</span>
+          </div>
+          <p class="text-secondary small menu-desc">Pedas gurih khas Bali.</p>
+          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1" aria-hidden="true"></i>Pesan</a>
+        </div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="card flex-shrink-0 menu-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/pasta.jpg" class="card-img-top menu-img" alt="Spaghetti Bolognese" loading="lazy" width="640" height="300">
+        <div class="card-body menu-body">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <h3 class="h6 mb-0 text-truncate">Spaghetti Bolognese</h3>
+            <span class="menu-price">Rp23.000</span>
+          </div>
+          <p class="text-secondary small menu-desc">Tomato based savory.</p>
+          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1" aria-hidden="true"></i>Pesan</a>
+        </div>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="card flex-shrink-0 menu-card" data-aos="fade-up" data-aos-delay="350">
+        <img src="images/churros.png" class="card-img-top menu-img" alt="Churros" loading="lazy" width="640" height="300">
+        <div class="card-body menu-body">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <h3 class="h6 mb-0 text-truncate">Churros</h3>
+            <span class="menu-price">Rp22.000</span>
+          </div>
+          <p class="text-secondary small menu-desc">Crispy dengan cinnamon sugar.</p>
+          <a class="btn btn-brand btn-sm w-100" href="#order"><i class="bi bi-bag me-1" aria-hidden="true"></i>Pesan</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- Menu Lengkap (Filter Kategori) -->
-  <section class="py-5" id="menu-lengkap">
-    <div class="container">
-      <h2 class="section-title mb-3">Menu Lengkap</h2>
-      <p class="text-secondary mb-4">Filter berdasarkan kategori untuk cari menu favoritmu.</p>
+<section class="py-5" id="menu-lengkap" aria-labelledby="menu-lengkap-title">
+  <div class="container">
+    <h2 class="section-title mb-3" id="menu-lengkap-title" data-aos="fade-right">Menu Lengkap</h2>
+    <p class="text-secondary mb-4" data-aos="fade-right" data-aos-delay="100">Filter berdasarkan kategori untuk cari menu favoritmu.</p>
 
-      <ul class="nav nav-pills gap-2 mb-4" id="filterPills">
-        <li class="nav-item"><button class="btn btn-outline-dark active" data-filter="all">All</button></li>
-        <li class="nav-item"><button class="btn btn-outline-dark" data-filter="coffee-clasic">Coffee Clasic</button></li>
-        <li class="nav-item"><button class="btn btn-outline-dark" data-filter="manual-brew">V-60</button></li>
-        <li class="nav-item"><button class="btn btn-outline-dark" data-filter="kopi-susu">Kopi Susu</button></li>
-        <li class="nav-item"><button class="btn btn-outline-dark" data-filter="mocktail">Mocktail</button></li>
-        <li class="nav-item"><button class="btn btn-outline-dark" data-filter="milk-based">Milk Based</button></li>
-        <li class="nav-item"><button class="btn btn-outline-dark" data-filter="tea-series">Tea Series</button></li>
-        <li class="nav-item"><button class="btn btn-outline-dark" data-filter="snack">Snack</button></li>
-        <li class="nav-item"><button class="btn btn-outline-dark" data-filter="main-course">Main Course</button></li>
-        <li class="nav-item"><button class="btn btn-outline-dark" data-filter="pastry">Pastry</button></li>
-        <li class="nav-item"><button class="btn btn-outline-dark" data-filter="pasta">Pasta</button></li>
-      </ul>
+    <ul class="nav nav-pills gap-2 mb-4" id="filterPills">
+      <li class="nav-item"><button type="button" class="btn btn-outline-dark active" data-filter="all" aria-pressed="true">Semua</button></li>
+      <li class="nav-item"><button type="button" class="btn btn-outline-dark" data-filter="coffee-classic" aria-pressed="false">Coffee Classic</button></li>
+      <li class="nav-item"><button type="button" class="btn btn-outline-dark" data-filter="manual-brew" aria-pressed="false">V-60</button></li>
+      <li class="nav-item"><button type="button" class="btn btn-outline-dark" data-filter="kopi-susu" aria-pressed="false">Kopi Susu</button></li>
+      <li class="nav-item"><button type="button" class="btn btn-outline-dark" data-filter="mocktail" aria-pressed="false">Mocktail</button></li>
+      <li class="nav-item"><button type="button" class="btn btn-outline-dark" data-filter="milk-based" aria-pressed="false">Milk Based</button></li>
+      <li class="nav-item"><button type="button" class="btn btn-outline-dark" data-filter="tea-series" aria-pressed="false">Tea Series</button></li>
+      <li class="nav-item"><button type="button" class="btn btn-outline-dark" data-filter="snack" aria-pressed="false">Snack</button></li>
+      <li class="nav-item"><button type="button" class="btn btn-outline-dark" data-filter="main-course" aria-pressed="false">Main Course</button></li>
+      <li class="nav-item"><button type="button" class="btn btn-outline-dark" data-filter="pastry" aria-pressed="false">Pastry</button></li>
+      <li class="nav-item"><button type="button" class="btn btn-outline-dark" data-filter="pasta" aria-pressed="false">Pasta</button></li>
+    </ul>
 
-      <!-- Grid menu lengkap: mobile rapi (3 kolom), naik bertahap -->
-      <div class="row g-3 g-md-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5" id="menuGrid">
-        <!-- (Tetap gunakan item-item & images milikmu; contoh pertama) -->
-        <div class="col menu-item" data-category="coffee-clasic">
-          <div class="card h-100">
-            <img src="images/espresso.jpg" class="card-img-top" alt="Espresso">
-            <div class="card-body">
-              <h3>Espresso <span class="menu-price">Rp18.000</span></h3>
-              <p class="text-secondary">Kopi hitam klasik.</p>
-            </div>
+    <!-- Grid menu lengkap: mobile 2 kolom, naik bertahap -->
+    <div class="row g-3 g-md-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5" id="menuGrid">
+      
+      <!-- Coffee Classic -->
+      <div class="col menu-item" data-category="coffee-classic" data-aos="zoom-in" data-aos-delay="0">
+        <div class="card h-100">
+          <img src="images/espresso.jpg" class="card-img-top" alt="Espresso" loading="lazy" width="200" height="200">
+          <div class="card-body">
+            <h3 class="h6 mb-1">Espresso <span class="menu-price">Rp18.000</span></h3>
+            <p class="text-secondary mb-0">Kopi pekat satu shot. Bold dan ringkas.</p>
           </div>
         </div>
+      </div>
 
-        <div class="col menu-item" data-category="coffee-clasic">
-          <div class="card h-100">
-            <img src="images/espresso.jpg" class="card-img-top" alt="Americano">
-            <div class="card-body">
-              <h3>Americano <span class="menu-price">Rp20.000</span></h3>
-              <p class="text-secondary">Espresso + air panas.</p>
-            </div>
+      <div class="col menu-item" data-category="coffee-classic" data-aos="zoom-in" data-aos-delay="25">
+        <div class="card h-100">
+          <img src="images/espresso.jpg" class="card-img-top" alt="Americano" loading="lazy" width="200" height="200">
+          <div class="card-body">
+            <h3 class="h6 mb-1">Americano <span class="menu-price">Rp20.000</span></h3>
+            <p class="text-secondary mb-0">Espresso dengan air panas. Clean dan ringan.</p>
           </div>
         </div>
+      </div>
 
-        <div class="col menu-item" data-category="coffee-clasic">
-          <div class="card h-100">
-            <img src="images/espresso.jpg" class="card-img-top" alt="Cappuccino">
-            <div class="card-body">
-              <h3>Cappuccino <span class="menu-price">Rp23.000</span></h3>
-              <p class="text-secondary">Espresso + steamed milk + foam.</p>
-            </div>
+      <div class="col menu-item" data-category="coffee-classic" data-aos="zoom-in" data-aos-delay="50">
+        <div class="card h-100">
+          <img src="images/espresso.jpg" class="card-img-top" alt="Cappuccino" loading="lazy" width="200" height="200">
+          <div class="card-body">
+            <h3 class="h6 mb-1">Cappuccino <span class="menu-price">Rp23.000</span></h3>
+            <p class="text-secondary mb-0">Espresso, steamed milk, dan foam tebal.</p>
           </div>
         </div>
+      </div>
 
-        <!-- …(lanjutan item kamu: kopi susu, mocktail, milk-based, tea, snack, main course, pastry, pasta) … -->
-        <!-- Salin seluruh blok item yang sudah kamu punya tanpa perubahan src gambar -->
-        <!-- --------- MULAI SALIN DARI SINI (dipendekkan di contoh) --------- -->
-        <!-- Coffee Clasic tambahan -->
-        <div class="col menu-item" data-category="coffee-clasic">
-          <div class="card h-100">
-            <img src="images/espresso.jpg" class="card-img-top" alt="Caffe Latte">
-            <div class="card-body">
-              <h3>Caffe Latte <span class="menu-price">Rp23.000</span></h3>
-              <p class="text-secondary">Kopi hitam klasik.</p>
-            </div>
+      <div class="col menu-item" data-category="coffee-classic" data-aos="zoom-in" data-aos-delay="75">
+        <div class="card h-100">
+          <img src="images/espresso.jpg" class="card-img-top" alt="Caffe Latte" loading="lazy" width="200" height="200">
+          <div class="card-body">
+            <h3 class="h6 mb-1">Caffe Latte <span class="menu-price">Rp23.000</span></h3>
+            <p class="text-secondary mb-0">Espresso dengan susu steamed. Creamy halus.</p>
           </div>
         </div>
-        <div class="col menu-item" data-category="coffee-clasic">
-          <div class="card h-100">
-            <img src="images/espresso.jpg" class="card-img-top" alt="Moccacino">
-            <div class="card-body">
-              <h3>Moccacino <span class="menu-price">Rp25.000</span></h3>
-              <p class="text-secondary">Kopi hitam klasik.</p>
-            </div>
-          </div>
-        </div>
+      </div>
 
-        <!-- Manual Brew -->
-        <div class="col menu-item" data-category="manual-brew">
-          <div class="card h-100">
-            <img src="images/manualbrew.jpg" class="card-img-top" alt="Filter">
-            <div class="card-body">
-              <h3>Filter <span class="menu-price">Rp25.000</span></h3>
-              <p class="text-secondary">Pour-over clean.</p>
-            </div>
+      <div class="col menu-item" data-category="coffee-classic" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card h-100">
+          <img src="images/Mocaccino _.png" class="card-img-top" alt="Moccacino" loading="lazy" width="200" height="200">
+          <div class="card-body">
+            <h3 class="h6 mb-1">Moccacino <span class="menu-price">Rp25.000</span></h3>
+            <p class="text-secondary mb-0">Espresso, susu, dan cokelat. Manis seimbang.</p>
           </div>
         </div>
-        <div class="col menu-item" data-category="manual-brew">
-          <div class="card h-100">
-            <img src="images/manualbrew.jpg" class="card-img-top" alt="Vietnam Drip">
-            <div class="card-body">
-              <h3>Vietname Drip <span class="menu-price">Rp20.000</span></h3>
-              <p class="text-secondary">Pour-over clean.</p>
-            </div>
+      </div>
+
+      <!-- Manual Brew -->
+      <div class="col menu-item" data-category="manual-brew" data-aos="zoom-in" data-aos-delay="125">
+        <div class="card h-100">
+          <img src="images/manualbrew.jpg" class="card-img-top" alt="Filter V60" loading="lazy" width="200" height="200">
+          <div class="card-body">
+            <h3 class="h6 mb-1">Filter <span class="menu-price">Rp25.000</span></h3>
+            <p class="text-secondary mb-0">Seduhan pour-over. Rasa clean dan aromatik.</p>
           </div>
         </div>
+      </div>
 
         <!-- Kopi Susu -->
-        <div class="col menu-item" data-category="kopi-susu">
+        <div class="col menu-item" data-category="kopi-susu" data-aos="zoom-in" data-aos-delay="150">
           <div class="card h-100">
-            <img src="images/kopsu.jpg" class="card-img-top" alt="KopSu Aren">
+            <img src="images/kopsu.jpg" class="card-img-top" alt="KopSu Aren" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>KopSu Aren <span class="menu-price">Rp20.000</span></h3>
               <p class="text-secondary">Espresso + susu + aren.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="kopi-susu">
+        <div class="col menu-item" data-category="kopi-susu" data-aos="zoom-in" data-aos-delay="175">
           <div class="card h-100">
-            <img src="images/kopsu.jpg" class="card-img-top" alt="KopSu Caramel">
+            <img src="images/kopsu.jpg" class="card-img-top" alt="KopSu Caramel" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>KopSu Caramel <span class="menu-price">Rp20.000</span></h3>
               <p class="text-secondary">Espresso + susu + caramel.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="kopi-susu">
+        <div class="col menu-item" data-category="kopi-susu" data-aos="zoom-in" data-aos-delay="200">
           <div class="card h-100">
-            <img src="images/kopsu.jpg" class="card-img-top" alt="KopSu Butterscotch">
+            <img src="images/kopsu.jpg" class="card-img-top" alt="KopSu Butterscotch" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>KopSu Butterscotch <span class="menu-price">Rp20.000</span></h3>
               <p class="text-secondary">Espresso + susu + butterscotch.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="kopi-susu">
+        <div class="col menu-item" data-category="kopi-susu" data-aos="zoom-in" data-aos-delay="225" width="200" height="200">
           <div class="card h-100">
-            <img src="images/kopsu.jpg" class="card-img-top" alt="KopSu Pistachio">
+            <img src="images/Pistachio _.png" class="card-img-top" alt="KopSu Pistachio" loading="lazy">
             <div class="card-body">
               <h3>KopSu Pistachio <span class="menu-price">Rp23.000</span></h3>
               <p class="text-secondary">Nutty & creamy.</p>
@@ -380,27 +376,27 @@
         </div>
 
         <!-- Mocktail -->
-        <div class="col menu-item" data-category="mocktail">
+        <div class="col menu-item" data-category="mocktail" data-aos="zoom-in" data-aos-delay="250" width="200" height="200">
           <div class="card h-100">
-            <img src="images/mocktail.jpg" class="card-img-top" alt="Cranberries">
+            <img src="images/mocktail.jpg" class="card-img-top" alt="Cranberries" loading="lazy">
             <div class="card-body">
               <h3>Cranberries <span class="menu-price">Rp23.000</span></h3>
               <p class="text-secondary">Segar & bersoda.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="mocktail">
+        <div class="col menu-item" data-category="mocktail" data-aos="zoom-in" data-aos-delay="275" width="200" height="200">
           <div class="card h-100">
-            <img src="images/mocktail.jpg" class="card-img-top" alt="Lolitta">
+            <img src="images/Lolita.png" class="card-img-top" alt="Lolitta" loading="lazy">
             <div class="card-body">
               <h3>Lolitta <span class="menu-price">Rp20.000</span></h3>
               <p class="text-secondary">Segar & bersoda.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="mocktail">
+        <div class="col menu-item" data-category="mocktail" data-aos="zoom-in" data-aos-delay="300">
           <div class="card h-100">
-            <img src="images/mocktail.jpg" class="card-img-top" alt="Cocopeach">
+            <img src="images/mocktail.jpg" class="card-img-top" alt="Cocopeach" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Cocopeach <span class="menu-price">Rp25.000</span></h3>
               <p class="text-secondary">Segar & fruity.</p>
@@ -409,36 +405,36 @@
         </div>
 
         <!-- Milk Based -->
-        <div class="col menu-item" data-category="milk-based">
+        <div class="col menu-item" data-category="milk-based" data-aos="zoom-in" data-aos-delay="325">
           <div class="card h-100">
-            <img src="images/milkbassed.jpg" class="card-img-top" alt="Redvelvet">
+            <img src="images/Red Velvet.png" class="card-img-top" alt="Redvelvet" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Redvelvet <span class="menu-price">Rp20.000</span></h3>
               <p class="text-secondary">Manis lembut.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="milk-based">
+        <div class="col menu-item" data-category="milk-based" data-aos="zoom-in" data-aos-delay="350">
           <div class="card h-100">
-            <img src="images/milkbassed.jpg" class="card-img-top" alt="Taro">
+            <img src="images/Taro.png" class="card-img-top" alt="Taro" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Taro <span class="menu-price">Rp20.000</span></h3>
               <p class="text-secondary">Manis lembut.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="milk-based">
+        <div class="col menu-item" data-category="milk-based" data-aos="zoom-in" data-aos-delay="375">
           <div class="card h-100">
-            <img src="images/milkbassed.jpg" class="card-img-top" alt="Chocolate">
+            <img src="images/Chocolate.png" class="card-img-top" alt="Chocolate" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Chocolate <span class="menu-price">Rp20.000</span></h3>
               <p class="text-secondary">Cokelat creamy.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="milk-based">
+        <div class="col menu-item" data-category="milk-based" data-aos="zoom-in" data-aos-delay="400">
           <div class="card h-100">
-            <img src="images/milkbassed.jpg" class="card-img-top" alt="Matcha">
+            <img src="images/Matcha _.png" class="card-img-top" alt="Matcha" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Matcha <span class="menu-price">Rp20.000</span></h3>
               <p class="text-secondary">Green tea milk.</p>
@@ -447,45 +443,45 @@
         </div>
 
         <!-- Tea -->
-        <div class="col menu-item" data-category="tea-series">
+        <div class="col menu-item" data-category="tea-series" data-aos="zoom-in" data-aos-delay="425">
           <div class="card h-100">
-            <img src="images/tea.jpg" class="card-img-top" alt="Lemon Tea">
+            <img src="images/lemon tea.png" class="card-img-top" alt="Lemon Tea" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Lemon Tea <span class="menu-price">Rp18.000</span></h3>
               <p class="text-secondary">Teh lemon segar.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="tea-series">
+        <div class="col menu-item" data-category="tea-series" data-aos="zoom-in" data-aos-delay="450">
           <div class="card h-100">
-            <img src="images/tea.jpg" class="card-img-top" alt="Lychee Tea">
+            <img src="images/Lychee Tea.png" class="card-img-top" alt="Lychee Tea" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>lychee Tea <span class="menu-price">Rp18.000</span></h3>
               <p class="text-secondary">Teh + leci.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="tea-series">
+        <div class="col menu-item" data-category="tea-series" data-aos="zoom-in" data-aos-delay="475">
           <div class="card h-100">
-            <img src="images/tea.jpg" class="card-img-top" alt="Peach Tea">
+            <img src="images/tea.jpg" class="card-img-top" alt="Peach Tea" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Peach Tea <span class="menu-price">Rp18.000</span></h3>
               <p class="text-secondary">Teh buah peach.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="tea-series">
+        <div class="col menu-item" data-category="tea-series" data-aos="zoom-in" data-aos-delay="500">
           <div class="card h-100">
-            <img src="images/tea.jpg" class="card-img-top" alt="Strawberry Tea">
+            <img src="images/tea.jpg" class="card-img-top" alt="Strawberry Tea" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Strawberry Tea <span class="menu-price">Rp18.000</span></h3>
               <p class="text-secondary">Teh rasa stroberi.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="tea-series">
+        <div class="col menu-item" data-category="tea-series" data-aos="zoom-in" data-aos-delay="525">
           <div class="card h-100">
-            <img src="images/tea.jpg" class="card-img-top" alt="Classic Tea">
+            <img src="images/tea.jpg" class="card-img-top" alt="Classic Tea" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Classic Tea <span class="menu-price">Rp10.000</span></h3>
               <p class="text-secondary">Teh klasik hangat/es.</p>
@@ -494,54 +490,54 @@
         </div>
 
         <!-- Snack -->
-        <div class="col menu-item" data-category="snack">
+        <div class="col menu-item" data-category="snack" data-aos="zoom-in" data-aos-delay="550">
           <div class="card h-100">
-            <img src="images/snack.jpg" class="card-img-top" alt="Chicken Seaweed Roll">
+            <img src="images/Chicken Seaweed Roll.png" class="card-img-top" alt="Chicken Seaweed Roll" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Chicken Seawed Roll <span class="menu-price">Rp17.000</span></h3>
               <p class="text-secondary">Gurih & renyah.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="snack">
+        <div class="col menu-item" data-category="snack" data-aos="zoom-in" data-aos-delay="575">
           <div class="card h-100">
-            <img src="images/snack.jpg" class="card-img-top" alt="Tahu Walik">
+            <img src="images/Tahu Salto.png" class="card-img-top" alt="Tahu Walik" loading="lazy" width="200" height="200">
             <div class="card-body">
-              <h3>Tahu Walik <span class="menu-price">Rp15.000</span></h3>
+              <h3>Tahu Salto <span class="menu-price">Rp15.000</span></h3>
               <p class="text-secondary">Cemilan khas.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="snack">
+        <div class="col menu-item" data-category="snack" data-aos="zoom-in" data-aos-delay="600">
           <div class="card h-100">
-            <img src="images/snack.jpg" class="card-img-top" alt="Tahu Bakso">
+            <img src="images/snack.jpg" class="card-img-top" alt="Tahu Bakso" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Tahu Bakso <span class="menu-price">Rp15.000</span></h3>
               <p class="text-secondary">Isi daging gurih.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="snack">
+        <div class="col menu-item" data-category="snack" data-aos="zoom-in" data-aos-delay="625">
           <div class="card h-100">
-            <img src="images/snack.jpg" class="card-img-top" alt="French Fries">
+            <img src="images/snack.jpg" class="card-img-top" alt="French Fries" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>French Fries <span class="menu-price">Rp15.000</span></h3>
               <p class="text-secondary">Kentang renyah.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="snack">
+        <div class="col menu-item" data-category="snack" data-aos="zoom-in" data-aos-delay="650">
           <div class="card h-100">
-            <img src="images/snack.jpg" class="card-img-top" alt="Onion Ring">
+            <img src="images/snack.jpg" class="card-img-top" alt="Onion Ring" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Onion Ring <span class="menu-price">Rp15.000</span></h3>
               <p class="text-secondary">Bawang renyah.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="snack">
+        <div class="col menu-item" data-category="snack" data-aos="zoom-in" data-aos-delay="675">
           <div class="card h-100">
-            <img src="images/snack.jpg" class="card-img-top" alt="Mix Platter">
+            <img src="images/snack.jpg" class="card-img-top" alt="Mix Platter" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Mix Platter <span class="menu-price">Rp28.000</span></h3>
               <p class="text-secondary">Campuran favorit.</p>
@@ -550,45 +546,45 @@
         </div>
 
         <!-- Main Course -->
-        <div class="col menu-item" data-category="main-course">
+        <div class="col menu-item" data-category="main-course" data-aos="zoom-in" data-aos-delay="700">
           <div class="card h-100">
-            <img src="images/main.jpg" class="card-img-top" alt="Ayam Lada Hitam">
+            <img src="images/Chicken Black Pepper.png" class="card-img-top" alt="Ayam Lada Hitam" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Ayam Lada Hitam <span class="menu-price">Rp25.000</span></h3>
               <p class="text-secondary">Pedas lada hitam.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="main-course">
+        <div class="col menu-item" data-category="main-course" data-aos="zoom-in" data-aos-delay="725">
           <div class="card h-100">
-            <img src="images/main.jpg" class="card-img-top" alt="Ayam Saus Mentega">
+            <img src="images/main.jpg" class="card-img-top" alt="Ayam Saus Mentega" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Ayam Saus Mentega <span class="menu-price">Rp25.000</span></h3>
               <p class="text-secondary">Gurih manis.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="main-course">
+        <div class="col menu-item" data-category="main-course" data-aos="zoom-in" data-aos-delay="750">
           <div class="card h-100">
-            <img src="images/main.jpg" class="card-img-top" alt="Ayam Suir Bali">
+            <img src="images/Balinese Chicken Spicy.png" class="card-img-top" alt="Ayam Suir Bali" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Ayam Suir Bali <span class="menu-price">Rp28.000</span></h3>
               <p class="text-secondary">Pedas khas Bali.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="main-course">
+        <div class="col menu-item" data-category="main-course" data-aos="zoom-in" data-aos-delay="775">
           <div class="card h-100">
-            <img src="images/main.jpg" class="card-img-top" alt="Beef Teriyaki">
+            <img src="images/main.jpg" class="card-img-top" alt="Beef Teriyaki" loading="lazy">
             <div class="card-body">
               <h3>Beef Teriyaki <span class="menu-price">Rp30.000</span></h3>
               <p class="text-secondary">Manis gurih Jepang.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="main-course">
+        <div class="col menu-item" data-category="main-course" data-aos="zoom-in" data-aos-delay="800">
           <div class="card h-100">
-            <img src="images/main.jpg" class="card-img-top" alt="Beef Yakiniku">
+            <img src="images/main.jpg" class="card-img-top" alt="Beef Yakiniku" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Beef Yakiniku <span class="menu-price">Rp30.000</span></h3>
               <p class="text-secondary">Saus yakiniku.</p>
@@ -597,36 +593,36 @@
         </div>
 
         <!-- Pastry -->
-        <div class="col menu-item" data-category="pastry">
+        <div class="col menu-item" data-category="pastry" data-aos="zoom-in" data-aos-delay="825">
           <div class="card h-100">
-            <img src="images/pastry.jpg" class="card-img-top" alt="Cheese Toast">
+            <img src="images/pastry.jpg" class="card-img-top" alt="Cheese Toast" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Cheese Toast <span class="menu-price">Rp15.000</span></h3>
               <p class="text-secondary">Toasted keju.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="pastry">
+        <div class="col menu-item" data-category="pastry" data-aos="zoom-in" data-aos-delay="850">
           <div class="card h-100">
-            <img src="images/pastry.jpg" class="card-img-top" alt="Chocolate Toast">
+            <img src="images/pastry.jpg" class="card-img-top" alt="Chocolate Toast" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Chocolate Toast <span class="menu-price">Rp15.000</span></h3>
               <p class="text-secondary">Cokelat lumer.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="pastry">
+        <div class="col menu-item" data-category="pastry" data-aos="zoom-in" data-aos-delay="875">
           <div class="card h-100">
-            <img src="images/pastry.jpg" class="card-img-top" alt="Churros">
+            <img src="images/churros.png" class="card-img-top" alt="Churros" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Churros <span class="menu-price">Rp22.000</span></h3>
               <p class="text-secondary">Crispy & cinnamon.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="pastry">
+        <div class="col menu-item" data-category="pastry" data-aos="zoom-in" data-aos-delay="900">
           <div class="card h-100">
-            <img src="images/pastry.jpg" class="card-img-top" alt="Egg Toast">
+            <img src="images/pastry.jpg" class="card-img-top" alt="Egg Toast" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Egg Toast <span class="menu-price">Rp15.000</span></h3>
               <p class="text-secondary">Telur & roti.</p>
@@ -635,266 +631,253 @@
         </div>
 
         <!-- Pasta -->
-        <div class="col menu-item" data-category="pasta">
+        <div class="col menu-item" data-category="pasta" data-aos="zoom-in" data-aos-delay="925">
           <div class="card h-100">
-            <img src="images/pasta.jpg" class="card-img-top" alt="Mac & Cheese">
+            <img src="images/pasta.jpg" class="card-img-top" alt="Mac & Cheese" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Mac & Cheese <span class="menu-price">Rp15.000</span></h3>
               <p class="text-secondary">Cheesy & creamy.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="pasta">
+        <div class="col menu-item" data-category="pasta" data-aos="zoom-in" data-aos-delay="950">
           <div class="card h-100">
-            <img src="images/pasta.jpg" class="card-img-top" alt="Spaghetti Bolognese">
+            <img src="images/pasta.jpg" class="card-img-top" alt="Spaghetti Bolognese" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Spaghetti Bolognese <span class="menu-price">Rp23.000</span></h3>
               <p class="text-secondary">Tomato sauce.</p>
             </div>
           </div>
         </div>
-        <div class="col menu-item" data-category="pasta">
+        <div class="col menu-item" data-category="pasta" data-aos="zoom-in" data-aos-delay="975">
           <div class="card h-100">
-            <img src="images/pasta.jpg" class="card-img-top" alt="Spaghetti Carbonara">
+            <img src="images/pasta.jpg" class="card-img-top" alt="Spaghetti Carbonara" loading="lazy" width="200" height="200">
             <div class="card-body">
               <h3>Spaghetti Carbonara <span class="menu-price">Rp23.000</span></h3>
               <p class="text-secondary">Creamy sauce.</p>
             </div>
           </div>
         </div>
-        <!-- --------- AKHIR SALINAN --------- -->
+      
       </div>
     </div>
   </section>
 
-  <!-- Order CTA & Jam Operasional -->
-  <section class="py-5" id="order">
-    <div class="container">
-      <div class="row g-3 g-md-4 row-cols-1 row-cols-md-2 align-items-start">
-        <!-- Kiri: Jam Operasional & Promo -->
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body p-3 p-md-4">
-              <h3 class="h6 h5-md mb-2 mb-md-3 text-primary d-flex align-items-center gap-2">
-                <i class="bi bi-clock-history"></i> <span>Jam Operasional</span>
-              </h3>
-              <div class="bg-light rounded-3 p-3 mb-3">
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="fw-semibold">Buka Setiap Hari</span>
-                  <span class="badge bg-success">09.00 – 23.30</span>
-                </div>
-                <small class="text-muted">*Kecuali saat ada event khusus, info update di Instagram.</small>
-              </div>
+<!-- Order CTA & Jam Operasional -->
+<section class="py-5" id="order" aria-labelledby="order-title">
+  <div class="container">
+    <div class="row g-3 g-md-4 row-cols-1 row-cols-md-2 align-items-start">
 
-              <hr class="my-3">
+      <!-- Jam Operasional -->
+      <div class="col" data-aos="fade-up" data-aos-delay="0">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-3 p-md-4">
+            <h2 id="order-title" class="h6 h5-md mb-2 mb-md-3 text-primary d-flex align-items-center gap-2">
+              <i class="bi bi-clock-history" aria-hidden="true"></i>
+              <span>Jam Operasional</span>
+            </h2>
 
-              <h3 class="h6 h5-md mb-2 text-primary d-flex align-items-center gap-2">
-                <i class="bi bi-tags"></i> <span>Promo</span>
-              </h3>
-              <div class="alert alert-warning border-0 rounded-3 py-2 mb-0">
-                🎓 Diskon <strong>10%</strong> untuk Pelajar/Mahasiswa<br>
-                <small>(Sen–Jum, 09.00–14.00, tunjukkan KTM)</small>
+            <div class="bg-light rounded-3 p-3 mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">Buka Setiap Hari</span>
+                <span class="badge bg-success">
+                  <time datetime="09:00">09.00</time>
+                  –
+                  <time datetime="23:30">23.30</time>
+                </span>
               </div>
+              <small class="text-muted">*Kecuali pada saat acara khusus, informasi terbaru dapat dilihat melalui akun Instagram kami.</small>
+            </div>
+
+            <hr class="my-3" />
+
+            <h3 class="h6 h5-md mb-2 text-primary d-flex align-items-center gap-2">
+              <i class="bi bi-tags" aria-hidden="true"></i>
+              <span>Promo</span>
+            </h3>
+            <div class="alert alert-warning border-0 rounded-3 py-2 mb-0">
+            Informasi terbaru dapat dilihat melalui akun Instagram kami <strong>@santikscoffee.kds</strong><br/>
             </div>
           </div>
-        </div>
-
-        <!-- Kanan: Order Info -->
-        <div class="col">
-          <h2 class="section-title mb-2 mb-md-3 d-flex align-items-center gap-2">
-            <i class="bi bi-bag-check-fill text-primary"></i><span>Order Cepat</span>
-          </h2>
-          <p class="text-secondary mb-3 fs-7">
-            Format: <strong>Nama – Menu – Hot/Iced – Sugar Level</strong>.
-          </p>
-
-          <div class="card border-0 shadow-sm mb-2">
-            <div class="card-body p-3 p-md-4">
-              <div class="d-grid gap-2 gap-md-3">
-                <a class="btn btn-lg btn-platform btn-shopee w-100" target="_blank" rel="noopener" href="shopee://foodshop/12345678">
-                  <i class="bi bi-bag-fill me-2"></i> ShopeeFood
-                </a>
-                <a class="btn btn-lg btn-platform btn-gofood w-100" target="_blank" rel="noopener" href="gofood://">
-                  <i class="bi bi-bag-check me-2"></i> GoFood
-                </a>
-                <a class="btn btn-lg btn-platform btn-grab w-100" target="_blank" rel="noopener" href="https://r.grab.com/g/2-1-6-C7JYTZD3GECEAA">
-                  <i class="bi bi-bag me-2"></i> GrabFood
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <ul class="list-unstyled small text-secondary mb-0">
-            <li><i class="bi bi-truck text-primary me-2"></i> Delivery: ikuti estimasi aplikasi.</li>
-          </ul>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Event/Promo Banner -->
-  <section class="py-5 bg-white" id="event">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-7">
-          <h2 class="section-title">Event & Promo</h2>
-          <p class="text-secondary">Pantau jadwal nobar timnas, live music, dan promo mingguan di instagram. Booking meja? Hubungi kami via WhatsApp.</p>
-          <a class="btn btn-outline-dark w-100 w-md-auto" href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20reservasi%20meja%20untuk%20event" target="_blank" rel="noopener">
-            <i class="bi bi-telephone-outbound me-2"></i>Reservasi Via WhatsApp
+      <!-- Order Cepat -->
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="section-title mb-2 mb-md-3 d-flex align-items-center gap-2" id="order-cta-title">
+          <i class="bi bi-bag-check-fill text-primary" aria-hidden="true"></i>
+          <span>Order Cepat</span>
+        </h2>
+        <p class="text-dark mb-3 fs-7">
+          Format: <strong>Nama – Menu – Hot/Iced – Sugar Level</strong>.
+        </p>
+
+        <div class="card border-0 shadow-sm mb-2">
+          <div class="card-body p-3 p-md-4">
+            <div class="d-grid gap-2 gap-md-3">
+              <a class="btn btn-lg btn-platform btn-shopee w-100" target="_blank" rel="noopener noreferrer" href="shopee://foodshop/12345678" aria-label="Order via ShopeeFood">
+                <i class="bi bi-bag-fill me-2" aria-hidden="true"></i>
+                ShopeeFood
+              </a>
+              <a class="btn btn-lg btn-platform btn-gofood w-100" target="_blank" rel="noopener noreferrer" href="gofood://" aria-label="Order via GoFood">
+                <i class="bi bi-bag-check me-2" aria-hidden="true"></i>
+                GoFood
+              </a>
+              <a class="btn btn-lg btn-platform btn-grab w-100" target="_blank" rel="noopener noreferrer" href="https://r.grab.com/g/2-1-6-C7JYTZD3GECEAA" aria-label="Order via GrabFood">
+                <i class="bi bi-bag me-2" aria-hidden="true"></i>
+                GrabFood
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <ul class="list-unstyled small text-secondary mb-0">
+          <li>
+            <i class="bi bi-truck text-primary me-2" aria-hidden="true"></i>
+            Delivery mengikuti estimasi aplikasi.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Event/Promo Banner -->
+<section class="py-5 bg-white" id="event" aria-labelledby="event-title">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-7" data-aos="fade-right">
+        <h2 class="section-title" id="event-title">Event & Promo</h2>
+        <p class="text-secondary">
+          Pantau jadwal nonton bareng tim nasional, pertunjukan musik langsung, serta promo mingguan melalui akun Instagram kami.
+          Apabila memerlukan reservasi meja, silakan menghubungi kami melalui WhatsApp.
+        </p>
+        <div class="d-grid d-md-inline">
+          <a class="btn btn-outline-dark" href="https://wa.me/6285182332802?text=Halo%2C%20saya%20ingin%20reservasi%20meja%20untuk%20event" target="_blank" rel="noopener noreferrer" aria-label="Reservasi via WhatsApp">
+            <i class="bi bi-telephone-outbound me-2" aria-hidden="true"></i>
+            Reservasi Via WhatsApp
           </a>
         </div>
-        <div class="col-lg-5">
-          <div class="card overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop" alt="Event banner" />
-          </div>
-        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Lokasi & Testimoni -->
-  <section class="py-5" id="lokasi">
-    <div class="container">
-      <div class="row g-4">
-        <!-- Lokasi (Map) -->
-        <div class="col-lg-6">
-          <h2 class="section-title">Lokasi Kami</h2>
-          <p class="text-secondary">Santiks Coffee & Calm — Kota, Kudus. Parkir luas, akses mudah dari jalan utama.</p>
-          <div class="ratio ratio-4x3 rounded-3 overflow-hidden">
-            <iframe
-              class="w-100 h-100 map-embed"
-              style="border:0"
-              loading="lazy"
-              allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31693.892501270588!2d110.7897275!3d-6.8018691!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c500007da32f%3A0xc432131695a000ba!2sSantiks%20Coffee%20%26%20Calm!5e0!3m2!1sid!2sid!4v1757783950743!5m2!1sid!2sid">
-            </iframe>
+<!-- Keluh & Lokasi -->
+<section class="py-5" id="lokasi" aria-labelledby="lokasi-title">
+  <div class="container">
+
+    <!-- Keluh & Saran -->
+    <div class="text-center mb-5" data-aos="zoom-in">
+      <a href="https://forms.gle/vFtzubrdMF7TQDEU7"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-feedback">
+        <i class="bi bi-chat-dots-fill me-2" aria-hidden="true"></i>
+        Keluh & Saran
+      </a>
+      <p class="small text-dark mt-2 mb-0">
+        Kami selalu terbuka untuk menerima masukan dari Anda. ✨
+      </p>
+    </div>
+
+    <!-- Lokasi + Jam Operasional -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up">
+        <h2 class="section-title mb-4 text-center" id="lokasi-title">Lokasi Kami</h2>
+
+        <div class="">
+          <div class="">
+
+            <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+              <i class="bi bi-shop text-primary fs-5" aria-hidden="true"></i>
+              <h3 class="fw-semibold m-0 fs-5">Santiks Coffee & Calm</h3>
+            </div>
+
+            <p class="text-dark text-center small mb-1">
+              <i class="bi bi-geo-alt me-1" aria-hidden="true"></i>
+              <strong>Mlati Norowito, Gg. 2 No.81, Kec. Kota Kudus</strong>
+            </p>
+            <p class="text-dark text-center mb-3">
+              Parkir luas, akses mudah dari jalan utama. Tempat ideal untuk nongkrong,
+              kerja santai, atau event komunitas kecil.
+            </p>
+
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+              <a href="https://maps.google.com/?q=Santiks+Coffee+%26+Calm"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn-sm btn-outline-dark">
+                <i class="bi bi-geo-alt me-1" aria-hidden="true"></i> Buka di Google Maps
+              </a>
+              <a href="https://instagram.com/santikscoffee.kds"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn-sm btn-brand">
+                <i class="bi bi-instagram me-1" aria-hidden="true"></i> Lihat Instagram
+              </a>
+            </div>
+
+            <hr class="my-3">
+            
           </div>
         </div>
 
-        <!-- Testimoni -->
-        <div class="col-lg-6">
-          <h2 class="section-title">Apa Kata Mereka</h2>
-
-          <div class="card mb-3">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center mb-1">
-                <strong>@rez***</strong>
-                <div class="small text-warning">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-half"></i>
-                </div>
-              </div>
-              <p class="mb-0 text-secondary">Latte-nya creamy, tempatnya adem. Mantap buat kerja lama-lama.</p>
-            </div>
-          </div>
-
-          <div class="card mb-3">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center mb-1">
-                <strong>@ved***</strong>
-                <div class="small text-warning">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-              <p class="mb-0 text-secondary">Harga bersahabat, barista ramah, playlist-nya enak!</p>
-            </div>
-          </div>
-
-          <div class="card mb-3">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center mb-1">
-                <strong>@che***</strong>
-                <div class="small text-warning">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-              <p class="mb-0 text-secondary">Rasa kopinya mantap, harga pas di kantong, baristanya friendly.</p>
-            </div>
-          </div>
-
-          <div class="card mb-0">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center mb-1">
-                <strong>@rz***</strong>
-                <div class="small text-warning">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-              <p class="mb-0 text-secondary">Tempat cozy, menu variatif, vibes-nya enak buat nongkrong bareng temen.</p>
-            </div>
-          </div>
-
-        </div>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- Footer -->
-  <footer class="pt-4 pb-4 bg-dark text-light">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center flex-wrap">
-        <div class="footer-left">
-          <h5 class="mb-1">Santiks Coffee & Calm</h5>
-          <small class="text-secondary">© <span id="y"></span> Rzkyadtzz.</small>
-        </div>
-        <div class="footer-right d-flex gap-3">
-          <a class="footer-link" href="https://instagram.com/santikscoffee.kds" target="_blank" rel="noopener">
-            <i class="bi bi-instagram"></i><span class="footer-text"> Instagram</span>
-          </a>
-          <a class="footer-link" href="https://www.tiktok.com/@santikscoffee.kds" target="_blank" rel="noopener">
-            <i class="bi bi-tiktok"></i><span class="footer-text"> TikTok</span>
-          </a>
-          <a class="footer-link" href="mailto:santikscoffee1@gmail.com">
-            <i class="bi bi-envelope"></i><span class="footer-text"> Email</span>
-          </a>
-        </div>
+<footer class="pt-4 pb-4 text-light" role="contentinfo">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <div class="footer-left">
+        <h5 class="mb-2">Santiks Coffee</h5>
+        <small class="text-white-50">© <span id="y"></span> Rzkyadtzz.</small>
+      </div>
+
+      <div class="footer-right d-flex gap-3" data-aos="fade" data-aos-offset="50">
+        <a class="footer-link" href="https://instagram.com/santikscoffee.kds" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-instagram" aria-hidden="true"></i><span class="footer-text"> Instagram</span>
+        </a>
+        <a class="footer-link" href="https://www.tiktok.com/@santikscoffee.kds" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-tiktok" aria-hidden="true"></i><span class="footer-text"> TikTok</span>
+        </a>
+        <a class="footer-link" href="mailto:santikscoffee1@gmail.com">
+          <i class="bi bi-envelope" aria-hidden="true"></i><span class="footer-text"> Email</span>
+        </a>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Tahun dinamis
-    (function(){
-      const yearEl = document.getElementById('y');
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-    })();
+<!-- Script Library -->
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    // Filter menu dengan animasi fade
-    (function(){
-      const buttons = document.querySelectorAll('#filterPills [data-filter]');
-      const items = document.querySelectorAll('#menuGrid .menu-item');
-      if (!buttons.length || !items.length) return;
+<!-- Inisialisasi AOS di Footer -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({
+      once: false,        // animasi aktif setiap scroll naik-turun
+      duration: 600,
+      easing: 'ease-in-out',
+      offset: 80,
+      disable: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    });
+  });
+</script>
 
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          buttons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
+<!-- Script Custom -->
+<script defer src="script.js"></script>
 
-          const f = btn.getAttribute('data-filter');
-          items.forEach(it => {
-            const match = f === 'all' || it.dataset.category === f;
-            if (match) {
-              it.style.display = 'flex';
-              it.style.opacity = 0;
-              setTimeout(() => { it.style.opacity = 1; }, 30);
-            } else {
-              it.style.opacity = 0;
-              setTimeout(() => { it.style.display = 'none'; }, 220);
-            }
-          });
-        });
-      });
-    })();
-  </script>
+<!-- Tahun Otomatis -->
+<script>
+  (function () {
+    const y = document.getElementById('y');
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+</script>
+
 </body>
 </html>

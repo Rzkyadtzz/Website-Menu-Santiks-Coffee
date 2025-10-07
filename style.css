@@ -1,45 +1,60 @@
-/* =========================
-   VARIABEL WARNA & BASE
-   ========================= */
+/* VARIABEL WARNA & BASE */
 :root {
-  --brand:#206bab;
-  --brand-2:#174a6c;
-  --cream:#f7efe7;
-  --text:#24323f;
+  --brand: #206bab;
+  --brand-2: #174a6c;
+  --blue: #E0FFFF ;
+  --text: #24323f;
 }
 
-html, body { height:100%; }
+html, body { height: 100%; }
 body {
-  background-color: var(--cream);
+  background-color: var(--blue); color: #fff;           
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* Container padding di HP biar gak mepet tepi */
-@media (max-width:576px){
+@media (max-width: 576px) {
   .container { padding-left: .9rem; padding-right: .9rem; }
+}
+
+/* Animasi naik-turun */
+@keyframes floatY {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+.float-anim { animation: floatY 3s ease-in-out infinite; }
+
+/* Hormati reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .float-anim { animation: none; }
+  .animate-item { transition: none; transform: none; opacity: 1; }
 }
 
 /* =========================
    NAVBAR
    ========================= */
-.navbar { backdrop-filter: saturate(180%) blur(8px); }
+.navbar  {
+  backdrop-filter: saturate(180%) blur(8px);
+  background: rgba(27,27,27,.6);     /* fallback warna agar kontras */
+}
 .nav-link { font-weight: 600; }
+.navbar.scrolled { background: rgba(27,27,27,.85) !important; }
 
-/* Navbar compact + bisa scroll kalau item banyak */
-@media (max-width:576px){
-  .navbar .navbar-brand{ font-size:1rem; }
-  .navbar .navbar-nav{
+@media (max-width: 576px) {
+  .navbar .navbar-brand { font-size: 1rem; }
+  .navbar .navbar-nav {
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    gap:.25rem;
+    gap: .25rem;
   }
   .navbar .nav-link,
-  .navbar .btn.btn-sm{
-    padding:.35rem .6rem;
-    font-size:.85rem;
+  .navbar .btn.btn-sm {
+    padding: .35rem .6rem;
+    font-size: .85rem;
     white-space: nowrap;
   }
 }
@@ -47,89 +62,95 @@ body {
 /* =========================
    HERO
    ========================= */
-.hero{
-  background: linear-gradient(to bottom, rgba(47,27,18,.55), rgba(47,27,18,.75)),
-              url('https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1920&auto=format&fit=crop');
+.hero {
+  background:
+    linear-gradient(to bottom, rgba(47,27,18,.55), rgba(47,27,18,.75)),
+    url('https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1920&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
-  color:#fff;
+  color: #fff;
   min-height: 75vh;
-  display:grid;
-  place-items:center;
-  text-align:center;
+  display: grid;
+  place-items: center;
+  text-align: center;
 }
-.hero h1{ font-weight:800; letter-spacing:.5px; }
-.badge-soft{ background:rgba(122,78,45,.15); color:#fff; border:1px solid rgba(255,255,255,.25); }
+.hero h1 { font-weight: 800; letter-spacing: .5px; }
+.badge-soft { background: rgba(122,78,45,.15); color: #fff; border: 1px solid rgba(255,255,255,.25); }
 
-@media (max-width:576px){
-  .hero{ min-height: 62vh; padding-top: 70px; }
-  .badge-soft{ padding:.35rem .6rem; font-size:.75rem; border-width:1px; }
-  .hero .display-4{ font-size:1.8rem; line-height:1.2; margin-bottom:.6rem; }
-  .hero .lead{ font-size:.95rem; margin-bottom:1rem; }
-  .hero .btn{
-    padding:.5rem .85rem;
-    font-size:.95rem;
-    border-radius:.6rem;
-  }
-  /* tombol di HP full-width bertumpuk */
-  .hero .hero-buttons{
-    flex-direction: column;
-    gap:.6rem !important;
-  }
-  .hero .hero-buttons .btn { width:100%; }
+@media (max-width: 576px) {
+  .hero { min-height: 62vh; padding-top: 70px; }
+  .badge-soft { padding: .35rem .6rem; font-size: .75rem; border-width: 1px; }
+  .hero .display-4 { font-size: 1.8rem; line-height: 1.2; margin-bottom: .6rem; }
+  .hero .lead { font-size: .95rem; margin-bottom: 1rem; }
+  .hero .btn { padding: .5rem .85rem; font-size: .95rem; border-radius: .6rem; }
+  .hero .hero-buttons { flex-direction: column; gap: .6rem !important; }
+  .hero .hero-buttons .btn { width: 100%; }
 }
 
 /* =========================
    KOMPONEN UMUM
    ========================= */
-.card{ border:0; box-shadow:0 10px 30px rgba(0,0,0,.08); }
-.section-title{ color:var(--brand-2); letter-spacing:.4px; font-weight:800; }
-.btn-brand{ background:var(--brand); color:#fff; }
-.btn-brand:hover{ background:var(--brand-2); color:#fff; }
-.menu-price{ color:var(--brand-2); font-weight:700; }
-.rating i{ color:#f6c445; }
-.map-embed{ filter:grayscale(20%) contrast(105%); border-radius:14px; }
-footer{ background:#1b1b1b; color:#cfcfcf; }
+.card { border: 0; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+.section-title { color: var(--brand-2); letter-spacing: .4px; font-weight: 800; }
+.btn-brand { background: var(--brand); color: #fff; }
+.btn-brand:hover { background: var(--brand-2); color: #fff; }
+.btn-brand:focus-visible { outline: 3px solid rgba(32,107,171,.35); outline-offset: 2px; }
+
+.menu-price { color: var(--brand-2); font-weight: 700; }
+.rating i { color: #f6c445; }
+.map-embed { filter: grayscale(20%) contrast(105%); border-radius: 14px; }
+footer { background: #1b1b1b; color: #cfcfcf; }
 
 /* =========================
    HIGHLIGHTS
    ========================= */
-.icon-brand{ color:#206bab !important; }
+.icon-brand { color: #206bab !important; }
 
-#highlight .card{
-  border:0;
-  border-radius:14px;
-  box-shadow:0 6px 16px rgba(0,0,0,.06);
-  transition:.25s ease;
+#highlight .card {
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  transition: transform .25s ease, box-shadow .25s ease;
 }
-#highlight .card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 28px rgba(0,0,0,.12);
+#highlight .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.12);
 }
-#highlight p{ font-size:0.95rem; line-height:1.5; }
+#highlight p { font-size: 0.95rem; line-height: 1.5; }
 
-@media (max-width:576px){
-  #highlight .h6{ font-size:1rem; }
-  #highlight p{ font-size:0.9rem; line-height:1.45; }
+@media (max-width: 576px) {
+  #highlight .h6 { font-size: 1rem; }
+  #highlight p { font-size: 0.9rem; line-height: 1.45; }
 }
-@media (min-width:768px){
-  #highlight .h5-md{ font-size:1.25rem; }
+@media (min-width: 768px) {
+  #highlight .h5-md { font-size: 1.25rem; }
 }
 
 /* Animasi muncul */
-.animate-item { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
-.animate-item.show { opacity: 1; transform: translateY(0); }
+.animate-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.animate-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-/* ===== Menu Populer (horizontal scroll) ===== */
+/* =========================
+   MENU POPULER (horizontal)
+   ========================= */
 .menu-scroll {
   scroll-snap-type: x mandatory;
   padding-bottom: .25rem;
+  overflow-x: auto;                    /* pastikan bisa geser */
+  -webkit-overflow-scrolling: touch;   /* momentum scroll di iOS */
+  display: flex;
+  gap: .75rem;
 }
-.menu-scroll .menu-card {
-  scroll-snap-align: start;
-}
+.menu-scroll .menu-card { scroll-snap-align: start; }
 
-/* Kartu menu */
+/* Kartu menu (populer) */
 .menu-card {
   width: 14rem;
   border: 0;
@@ -142,61 +163,64 @@ footer{ background:#1b1b1b; color:#cfcfcf; }
   box-shadow: 0 10px 20px rgba(0,0,0,.12);
 }
 
-/* Gambar seragam */
+/* Gambar di kartu menu (jika pakai .menu-img) */
+.menu-img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Gambar seragam (populer) */
 .menu-img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* kotak, biar konsisten */
+  aspect-ratio: 1 / 1; /* kotak, konsisten */
   object-fit: cover;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   display: block;
 }
 
-/* Isi kartu */
-.menu-body {
-  padding: .6rem .65rem;
-}
+/* Isi kartu (populer) */
+.menu-body { padding: .6rem .65rem; }
+
+/* Deskripsi 2 baris (populer) */
 .menu-desc {
+  display: box;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* maksimal 2 baris */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 2.1em;
+  text-overflow: ellipsis; /* titik tiga */
+  line-height: 1.35;
+  max-height: 2.7em; /* batas tinggi 2 baris */
 }
+
+
 .menu-price {
   white-space: nowrap;
-  color: #206bab;
+  color: var(--brand); /* konsisten pakai variable */
   font-weight: 700;
 }
 
-/* Mobile tuning */
+/* Mobile tuning (populer) */
 @media (max-width: 576px) {
-  .menu-card {
-    width: 10.5rem; /* lebih kecil biar muat banyak */
-  }
-  .menu-body {
-    padding: .5rem .55rem;
-  }
-  .menu-body .h6 {
-    font-size: .95rem;
-  }
-  .menu-price {
-    font-size: .9rem;
-  }
+  .menu-card { width: 10.5rem; }
+  .menu-body { padding: .5rem .55rem; }
+  .menu-body .h6 { font-size: .95rem; }
+  .menu-price { font-size: .9rem; }
   .menu-desc {
     font-size: .82rem;
     line-height: 1.3;
+    min-height: 2.6em; /* 2 x 1.3em */
   }
-  .menu-scroll {
-    gap: .6rem !important;
-  }
+  .menu-scroll { gap: .6rem !important; }
 }
 
-/* Tablet */
+/* Tablet (populer) */
 @media (min-width: 577px) and (max-width: 991px) {
-  .menu-card {
-    width: 12rem;
-  }
+  .menu-card { width: 12rem; }
 }
 
 /* =========================
@@ -205,154 +229,264 @@ footer{ background:#1b1b1b; color:#cfcfcf; }
 
 /* Filter pills compact di HP */
 @media (max-width: 576px) {
-  #filterPills { overflow-x:auto; -webkit-overflow-scrolling:touch; }
-  #filterPills .btn {
-    font-size: .75rem;
-    padding: .25rem .5rem;
-    white-space: nowrap;
-  }
+  #filterPills { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  #filterPills .btn { font-size: .75rem; padding: .25rem .5rem; white-space: nowrap; }
 }
 
-/* Kartu menu dasar */
-#menuGrid .card{
+/* Kartu menu (grid) */
+#menuGrid .card {
   border: 0;
   border-radius: 12px;
   box-shadow: 0 6px 14px rgba(0,0,0,.06);
   transition: transform .2s ease, box-shadow .2s ease;
   height: 100%;
 }
-#menuGrid .card:hover{
+#menuGrid .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,.12);
 }
 
-/* Gambar seragam (square disarankan untuk 3 kolom HP) */
-#menuGrid .card-img-top{
+/* Gambar seragam (grid) */
+#menuGrid .card-img-top {
   width: 100%;
-  aspect-ratio: 1 / 1;  /* konsisten tinggi */
+  aspect-ratio: 1 / 1; /* konsisten tinggi */
   /* alternatif: aspect-ratio: 4 / 3; */
   object-fit: cover;
   display: block;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  background-color: #f6f7f9; /* cegah lompatan saat loading */
 }
 
-/* Body kartu */
-#menuGrid .card-body{
+/* Body kartu (grid) */
+#menuGrid .card-body {
   display: flex;
   flex-direction: column;
   gap: .35rem;
-  padding: .6rem .65rem; /* compact default */
+  padding: .6rem .65rem;
 }
-@media (min-width: 768px){
-  #menuGrid .card-body{ padding: .75rem .9rem; }
-}
-
-/* Judul + harga (pakai h3 ... <span class="menu-price">) */
-#menuGrid h3{
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: .5rem;
-  font-size: .95rem;
-  line-height: 1.2;
-  margin: 0;
-}
-#menuGrid h3 span.menu-price{
-  white-space: nowrap;
-  color: #206bab;
-  font-weight: 700;
+@media (min-width: 768px) {
+  #menuGrid .card-body { padding: .75rem .9rem; }
 }
 
-/* Deskripsi produk */
-#menuGrid .card-body p{
-  font-size: .82rem;
-  line-height: 1.35;
-  margin: 0;
+/* Judul + harga (grid) */
+#menuGrid h3 {
+display: flex;
+align-items: baseline;
+justify-content: space-between;
+gap: .5rem;
+font-size: .95rem;
+line-height: 1.2;
+margin: 0;
+}
+#menuGrid h3 span.menu-price {
+white-space: nowrap;
+color: var(--brand);
+font-weight: 700;
 }
 
-/* Tuning HP */
-@media (max-width: 576px){
-  #menuGrid .card-body{ padding: .5rem .55rem; }
-  #menuGrid h3{ font-size: .85rem; }
-  #menuGrid h3 span.menu-price{ font-size: .85rem; }
-  #menuGrid .card-body p{ font-size: .78rem; line-height: 1.3; }
+/* Deskripsi produk (grid) */
+#menuGrid .card-body p {
+font-size: .82rem;
+line-height: 1.35;
+margin: 0;
+}
+
+/* Kecilkan judul di HP agar tidak terpotong */
+@media (max-width: 576px) {
+#menuGrid h3 { font-size: .9rem; }
+}
+
+/* Tuning HP (grid) */
+@media (max-width: 576px) {
+#menuGrid .card-body { padding: .5rem .55rem; }
+#menuGrid h3 { font-size: .85rem; }
+#menuGrid h3 span.menu-price { font-size: .85rem; }
+#menuGrid .card-body p { font-size: .78rem; line-height: 1.3; }
 }
 
 /* Fade animasi saat filter */
-#menuGrid .menu-item { transition: opacity .3s ease; }
+#menuGrid .menu-item { transition: opacity .3s ease; will-change: opacity; }
 
 /* =========================
-   ORDER (CTA) & JAM OPERASIONAL
-   ========================= */
+ORDER (CTA) & JAM OPERASIONAL
+========================= */
 
 /* Tombol platform brand */
-.btn-platform { font-weight:600; color:#fff; border:0; }
-.btn-shopee { background:#EE4D2D; }
-.btn-shopee:hover { background:#d84327; }
-.btn-gofood { background:#E52435; }
-.btn-gofood:hover { background:#c71d2d; }
-.btn-grab { background:#00b14f; }
-.btn-grab:hover { background:#009542; }
+.btn-platform { font-weight: 600; color: #fff; border: 0; }
+.btn-shopee { background: #EE4D2D; }
+.btn-shopee:hover { background: #d84327; }
+.btn-gofood { background: #E52435; }
+.btn-gofood:hover { background: #c71d2d; }
+.btn-grab { background: #00b14f; }
+.btn-grab:hover { background: #009542; }
+
+/* Fokus jelas untuk aksesibilitas */
+.btn-platform:focus-visible,
+.btn-feedback:focus-visible {
+outline: 3px solid rgba(32,107,171,.35);
+outline-offset: 2px;
+}
 
 /* Font bantu kecil */
 .fs-7 { font-size: .9rem; }
 
 /* Compact khusus HP: dua kolom tetap rapi */
-@media (max-width:576px){
-  #order .section-title { font-size:1.05rem; }
-  #order .card-body { padding: .85rem .9rem !important; }
-  #order .btn-platform.btn-lg {
-    padding: .55rem .75rem;
-    font-size: .95rem;
-    border-radius: .6rem;
-  }
-  #order .badge { font-size:.75rem; padding:.4rem .5rem; }
-  #order .alert { font-size:.9rem; }
-  #order .row { --bs-gutter-x: .75rem; --bs-gutter-y: .75rem; }
+@media (max-width: 576px) {
+#order .section-title { font-size: 1.05rem; }
+#order .card-body { padding: .85rem .9rem !important; }
+#order .btn-platform.btn-lg { padding: .55rem .75rem; font-size: .95rem; border-radius: .6rem; }
+#order .badge { font-size: .75rem; padding: .4rem .5rem; }
+#order .alert { font-size: .9rem; }
+#order .row { --bs-gutter-x: .75rem; --bs-gutter-y: .75rem; }
+}
+
+/* Styling untuk embed form di Keluh & Saran
+(tambahkan aturan di sini bila diperlukan) */
+
+/* Map iframe di section lokasi */
+#lokasi iframe { border: 0; width: 100%; height: 100%; }
+
+/* Pastikan container embed punya ukuran yang baik */
+#lokasi .ratio { min-height: 300px; }
+@media (max-width: 576px) {
+#lokasi .ratio { min-height: 240px; }
+}
+
+/* Tombol Feedback */
+.btn-feedback {
+background: linear-gradient(135deg, #206bab, #174a6c);
+color: #fff;
+font-weight: 600;
+padding: .75rem 1.5rem;
+border-radius: 50px;
+box-shadow: 0 6px 14px rgba(0,0,0,.15);
+transition: all .3s ease;
+}
+.btn-feedback:hover {
+background: linear-gradient(135deg, #174a6c, #10334a);
+transform: translateY(-3px);
+box-shadow: 0 10px 20px rgba(0,0,0,.2);
+color: #fff;
+}
+
+/* Mobile tuning tombol feedback */
+@media (max-width: 576px) {
+.btn-feedback {
+display: block;
+width: 100%;
+font-size: .95rem;
+padding: .7rem 1rem;
+}
 }
 
 /* =========================
-   LOKASI (MAP) & TESTIMONI
-   ========================= */
-#lokasi .section-title{ margin-bottom:.5rem; }
+LOKASI (MAP) & TESTIMONI
+========================= */
+#lokasi .section-title { margin-bottom: .5rem; }
 
 /* Map responsive radius di HP */
-@media (max-width:576px){
-  #lokasi .ratio{ border-radius: 12px; }
+@media (max-width: 576px) {
+#lokasi .ratio { border-radius: 12px; }
 }
 
 /* Testimoni compact di HP */
 @media (max-width: 576px) {
-  #lokasi .card { border:0; box-shadow:0 6px 14px rgba(0,0,0,.06); }
-  #lokasi .card + .card { margin-top:.6rem; }
-  #lokasi .card-body { padding: 0.5rem 0.75rem; }
-  #lokasi .card-body strong { font-size: 0.8rem; }
-  #lokasi .card-body p { font-size: 0.75rem; line-height: 1.2; margin-bottom:0; }
-  #lokasi .card-body .small i { font-size: 0.7rem; }
-  #lokasi h2.section-title { font-size: 1.1rem; }
+#lokasi .card { border: 0; box-shadow: 0 6px 14px rgba(0,0,0,.06); }
+#lokasi .card + .card { margin-top: .6rem; }
+#lokasi .card-body { padding: .5rem .75rem; }
+#lokasi .card-body strong { font-size: .8rem; }
+#lokasi .card-body p { font-size: .75rem; line-height: 1.2; margin-bottom: 0; }
+#lokasi .card-body .small i { font-size: .7rem; }
+#lokasi h2.section-title { font-size: 1.1rem; }
 }
 
 /* =========================
-   FOOTER & SOSMED
-   ========================= */
+FOOTER & SOSMED
+========================= */
 .footer-left, .footer-right { flex: 1; }
 .footer-left { text-align: left; }
 .footer-right { justify-content: flex-end; flex-wrap: wrap; }
 
 .footer-link {
-  color: #d7e6f1;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color .2s ease;
-  display: flex;
-  align-items: center;
-  gap: 4px;
+color: #d7e6f1;
+text-decoration: none;
+font-size: .95rem;
+transition: color .2s ease;
+display: flex;
+align-items: center;
+gap: 4px;
 }
 .footer-link:hover { color: #ffffff; }
 
 /* HP: hanya ikon (teks disembunyikan) */
 .footer-text { display: inline; }
 @media (max-width: 576px) {
-  .footer-text { display: none; }
+.footer-text { display: none; }
+}
+
+/* Penyesuaian warna harga agar konsisten */
+.menu-price { color: var(--brand); font-weight: 700; }
+#menuGrid h3 span.menu-price { color: var(--brand); }
+
+/* ====== Animasi & Interaksi Ringan ====== */
+.btn-brand { transition: transform .2s ease, box-shadow .2s ease; }
+.btn-brand:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,.12); }
+
+/* Hover kartu (desktop) */
+@media (hover: hover) {
+  .menu-card,
+  #menuGrid .card,
+  #highlight .card {
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .menu-card:hover,
+  #menuGrid .card:hover,
+  #highlight .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.14);
+  }
+}
+
+/* Navbar: taruh transisi di base agar halus saat toggle scrolled */
+.navbar { transition: background .25s ease, box-shadow .25s ease, transform .25s ease; }
+.navbar.scrolled {
+  background: rgba(27,27,27,.92) !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,.15);
+}
+
+/* Hero parallax: biar container naik-turun halus */
+.hero .container {
+  will-change: transform, opacity;
+  transition: transform .2s ease-out, opacity .2s ease-out;
+}
+
+/* Scrollbar horizontal list (Menu Populer) halus */
+.menu-scroll {
+  scroll-snap-type: x mandatory;       /* pastikan hanya didefinisikan sekali */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.menu-card { width: 14rem; scroll-snap-align: start; }
+
+/* AOS default tweak – fallback bila JS belum load */
+[data-aos] {
+  transition-property: opacity, transform;
+  transition-duration: .5s;
+  transition-timing-function: ease-out;
+  will-change: opacity, transform;
+}
+
+/* Aksesibilitas: reduce motion (dibatasi ke elemen animasi saja) */
+@media (prefers-reduced-motion: reduce) {
+  .btn-brand,
+  .menu-card,
+  #menuGrid .card,
+  #highlight .card,
+  [data-aos],
+  .hero .container {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
 }
